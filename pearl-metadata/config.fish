@@ -1,4 +1,6 @@
-set PATH $PATH $PEARL_PKGDIR/bin
+if not contains $PEARL_PKGDIR/bin $PATH
+    set PATH $PATH $PEARL_PKGDIR/bin
+end
 
 # Cleanup temp directory
 function pearl_remove_tmp --on-process-exit %self
